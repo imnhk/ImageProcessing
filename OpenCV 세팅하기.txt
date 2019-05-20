@@ -1,0 +1,21 @@
+Visual Studio에서 OpenCV 세팅하는 법
+
+VS 위에 툴바에서 x64로 설정 (x84로 하면 LNK 오류)
+
+프로젝트 속성에서
+    C/C++
+        추가 포함 디렉터리: C:\ ... \build\include
+    링커
+        추가 라이브러리 디렉터리: C:\ ... \build\x64\vc15\lib
+    디버깅
+        환경: PATH=C:\ ... \build\x64\vc15\bin;%PATH%
+    구성 -> 활성(Debug)
+    링커
+        입력
+            추가 종속성: opencv_world410d.lib;
+    구성 -> Release
+    링커
+        입력    
+            추가 종속성: opencv_world410.lib;
+
+하면 된다.

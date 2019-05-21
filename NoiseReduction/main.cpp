@@ -1,5 +1,5 @@
-// Image processing, histogram equalization
-// Namhyeon Kim, 2019. 04. 12
+// Image processing, Noise reduction
+// Namhyeon Kim, 2019. 05. 20.
 
 #include <opencv2/opencv.hpp>
 
@@ -7,41 +7,24 @@ using namespace cv;
 
 int main(int, char**)
 {
-	Mat image = imread("image2.jpg", 0);
-	image.convertTo(image, CV_8UC1);
-	int pixelCounts = image.cols*image.rows;
+	Mat original = imread("original.png", 0);
+	Mat gaussian10 = imread("Gaussian_0.10.png", 0);
+	Mat gaussian20 = imread("Gaussian_0.20.png", 0);
+	Mat result;
 
-	Mat newImage;
-	newImage.create(image.size(), CV_8UC1);
+	original.convertTo(original, CV_8UC1);
 
-	// Initialize histogram
-	int histogram[256];
-	for (int i = 0; i < 256; i++) {
-		histogram[i] = 0;
-	}
-	for (int i = 0; i < image.rows; i++) {
-		for (int j = 0; j < image.cols; j++) {
-			histogram[image.at<uchar>(i, j)]++;
-		}
-	}
+	fastNlMeansDenoising(gaussian10, gaussian10, 30, 7, 21);
+	fastNlMeansDenoising(gaussian20, gaussian20, 30, 7, 21);
+	//GaussianBlur(gaussian, result, Size(5, 5), 1, 0, BORDER_REFLECT);
 
-	// Accumulate histogram
-	for (int i = 1; i < 256; i++) {
-		histogram[i] += histogram[i-1];
-	}
+	imshow("Original", original);
+	imshow("Gaussian", gaussian10);
+	imshow("Gaussian2", gaussian20);
+	//imshow("Result", result);
 
-	// Histogram equalization
-	int intensity;
-	for (int i = 0; i < image.rows; i++) {
-		for (int j = 0; j < image.cols; j++) {
-			// Intensity transformation
-			intensity = image.at<uchar>(i, j);
-			newImage.at<uchar>(i, j) = intensity * histogram[intensity] / pixelCounts;
-		}
-	}
 
-	imshow("Result", newImage);
 	waitKey();
-
+	
 	return 0;
 }

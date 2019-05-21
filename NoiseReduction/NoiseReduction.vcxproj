@@ -129,6 +129,24 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="Gaussian_0.10.png" />
+    <Image Include="Gaussian_0.15.png" />
+    <Image Include="Gaussian_0.20.png" />
+    <Image Include="original.png" />
+    <Image Include="pepper_0.05.png" />
+    <Image Include="pepper_0.10.png" />
+    <Image Include="pepper_0.15.png" />
+    <Image Include="salt_0.05.png" />
+    <Image Include="salt_0.10.png" />
+    <Image Include="salt_0.15.png" />
+    <Image Include="salt_pepper_0.05.png" />
+    <Image Include="salt_pepper_0.10.png" />
+    <Image Include="salt_pepper_0.15.png" />
+    <Image Include="uniform_0.10.png" />
+    <Image Include="uniform_0.15.png" />
+    <Image Include="uniform_0.20.png" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

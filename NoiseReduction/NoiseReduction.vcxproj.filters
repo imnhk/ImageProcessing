@@ -19,4 +19,54 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="Gaussian_0.15.png">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="Gaussian_0.20.png">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="Gaussian_0.10.png">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="original.png">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="pepper_0.10.png">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="salt_0.05.png">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="salt_0.15.png">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="salt_pepper_0.10.png">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="uniform_0.10.png">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="uniform_0.20.png">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="pepper_0.05.png">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="pepper_0.15.png">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="salt_0.10.png">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="salt_pepper_0.05.png">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="salt_pepper_0.15.png">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="uniform_0.15.png">
+      <Filter>리소스 파일</Filter>
+    </Image>
+  </ItemGroup>
 </Project>

@@ -19,8 +19,6 @@ int main(int, char**)
 	img[3] = imread("salt_pepper_0.05.png", 0);
 	img[4] = imread("uniform_0.10.png", 0);
 
-	imshow("Original", original);
-
 	// Gaussian, Uniform noise는 Non-local Means Denoising algorithm 으로 잘 제거된다.
 	fastNlMeansDenoising(img[0], result[0], 15, 5, 21);
 	fastNlMeansDenoising(img[4], result[4], 15, 5, 21);
@@ -30,11 +28,13 @@ int main(int, char**)
 	medianBlur(img[2], result[2], 3);
 	medianBlur(img[3], result[3], 3);
 
-	imshow("Gaussian_Before", img[0]);
-	imshow("Pepper_Before", img[1]);
-	imshow("Salt_Before", img[2]);
-	imshow("Salt_Pepper_Before", img[3]);
-	imshow("Uniform_Before", img[4]);
+	//imshow("Gaussian_Before", img[0]);
+	//imshow("Pepper_Before", img[1]);
+	//imshow("Salt_Before", img[2]);
+	//imshow("Salt_Pepper_Before", img[3]);
+	//imshow("Uniform_Before", img[4]);
+
+	imshow("Original", original);
 
 	imshow("Gaussian_After", result[0]);
 	imshow("Pepper_After", result[1]);
